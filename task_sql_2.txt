@@ -1,0 +1,8 @@
+SELECT 
+ROUND(AVG(notebooks_notebook.width))  as width, 
+ROUND(AVG(notebooks_notebook.depth))  as depth, 
+ROUND(AVG(notebooks_notebook.height))  as height,
+ count (height) as wcount
+FROM notebooks_notebook
+GROUP BY  width, depth, height
+ORDER BY width DESC
